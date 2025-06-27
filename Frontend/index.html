@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkinson's Disease Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Parkinson's Disease Detector</h1>
+    <section class="patient-info">
+  <fieldset>
+    <legend>👤 Patient & Doctor Info</legend>
+    <div class="row">
+      <label>Patient Name<input id="patientName" class="input" /></label>
+      <label>Age<input id="patientAge" class="input" type="number" /></label>
+      <label>Address<input id="patientAddress" class="input" /></label>
+      <label>Doctor Name<input id="doctorName" class="input" /></label>
+    </div>
+  </fieldset>
+</section>
+    <p class="instructions">
+      Enter all values from voice measurement. All fields are required for accurate prediction.
+    </p>
+
+    <form id="predict-form">
+
+      <!-- Frequency -->
+      <fieldset>
+        <legend>🎵 Fundamental Frequency Measurements</legend>
+        <div class="row">
+          <label>MDVP:Fo(Hz)<input class="input" placeholder="Avg vocal frequency" /></label>
+          <label>MDVP:Fhi(Hz)<input class="input" placeholder="Max frequency" /></label>
+          <label>MDVP:Flo(Hz)<input class="input" placeholder="Min frequency" /></label>
+        </div>
+      </fieldset>
+
+      <!-- Jitter -->
+      <fieldset>
+        <legend>⚡ Jitter Measurements</legend>
+        <div class="row">
+          <label>Jitter (%)<input class="input" /></label>
+          <label>Jitter(Abs)<input class="input" /></label>
+          <label>RAP<input class="input" /></label>
+          <label>PPQ<input class="input" /></label>
+          <label>Jitter:DDP<input class="input" /></label>
+        </div>
+      </fieldset>
+
+      <!-- Shimmer -->
+      <fieldset>
+        <legend>📉 Shimmer Measurements</legend>
+        <div class="row">
+          <label>Shimmer<input class="input" /></label>
+          <label>Shimmer(dB)<input class="input" /></label>
+          <label>APQ3<input class="input" /></label>
+          <label>APQ5<input class="input" /></label>
+          <label>MDVP:APQ<input class="input" /></label>
+          <label>Shimmer:DDA<input class="input" /></label>
+        </div>
+      </fieldset>
+
+      <!-- Noise -->
+      <fieldset>
+        <legend>💙 Noise & Harmonicity</legend>
+        <div class="row">
+          <label>NHR<input class="input" /></label>
+          <label>HNR<input class="input" /></label>
+        </div>
+      </fieldset>
+
+      <!-- Nonlinear -->
+      <fieldset>
+        <legend>🌀 Nonlinear Dynamical Measures</legend>
+        <div class="row">
+          <label>RPDE<input class="input" /></label>
+          <label>DFA<input class="input" /></label>
+          <label>Spread1<input class="input" /></label>
+          <label>Spread2<input class="input" /></label>
+          <label>D2<input class="input" /></label>
+          <label>PPE<input class="input" /></label>
+        </div>
+      </fieldset>
+      <button type="submit">🎯 Predict Parkinson’s Disease</button>
+      <button type="button" onclick="printReport()">🖨️ Print / Download Report</button>
+    </form>
+    <div class="buttons">
+      <button type="button" onclick="generateAndShowGraphs()">📊 Show Graphs</button>
+    </div>
+
+    <div id="result" class="result">
+      <h3>Visualizations</h3>
+      <img id="confusion" src="" alt="Confusion Matrix" style="display:none; max-width:100%;" />
+      <img id="importance" src="" alt="Feature Importance" style="display:none; max-width:100%;" />
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>Medical Disclaimer:</strong> This tool is for educational and research purposes only. It is not a substitute for professional diagnosis.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <footer class="footer">
+  <p>Created by <strong>Er. Dipesh Raj Joshi</strong></p>
+</footer>
+
+</body>
+</html>

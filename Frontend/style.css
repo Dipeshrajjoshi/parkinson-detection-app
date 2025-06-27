@@ -1,0 +1,118 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d0f0ff, #e1bee7);
+  color: #333;
+}
+
+/* Layout */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  margin: auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(8px);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #4a148c;
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+
+/* Form Sections */
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #6a1b9a;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fdfdfd;
+}
+
+/* Feature Inputs Grid */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+}
+
+/* Buttons */
+button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background: #7b1fa2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 0 0;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4a148c;
+}
+
+/* Results & Graphs */
+.result {
+  background: #e8f5e9;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 6px solid #388e3c;
+  border-radius: 6px;
+  color: #2e7d32;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+#graphs img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: rgba(74, 20, 140, 0.1);
+  font-size: 1rem;
+  color: #4a148c;
+  border-top: 1px solid #ccc;
+}
